@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebSocket Client</title>
+    </head>
+    <body>
+        <h1>WebSocket Client</h1>
+        <div id="chatOutput"></div>
+        <input type="text" id="messageInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+
+        <script>
+        const chatOutput = document.getElementById('chatOutput');
+        const messageInput = document.getElementById('messageInput');
+        let ws;
+
+        function connectWebSocket() {
+            ws = new WebSocket("ws://localhost:8080/messages");
+
+            ws.onopen = function(event) {
+                console.log("WebSocket connected");
+            };
+
+            ws.onmessage = function(event) {
+                const message = JSON.parse(event.data);
+                displayMessage(message);
+            };
+
+            ws.onclose = function(event) {
+                console.log("WebSocket closed");
+            };
+        }
+
+        function sendMessage() {
+            const messageContent = messageInput.value.trim();
+            if (messageContent !== "") {
+                const message = {
+                    sender: 1, // Replace with sender's ID
+                    receiver: 2, // Replace with receiver's ID
+                    content: messageContent
+                };
+                ws.send(JSON.stringify(message));
+                messageInput.value = "";
+            }
+        }
+
+        function displayMessage(message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = `From ${message.sender}: ${message.content}`;
+            chatOutput.appendChild(messageElement);
+        }
+
+        connectWebSocket();
+    </script>
+    </body>
+</html>

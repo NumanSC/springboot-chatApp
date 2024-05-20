@@ -1,0 +1,254 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #0c1317;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 95vh;
+  background-color: rgba(44, 44, 44, 255);
+}
+
+.chat-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+.header {
+  background-color: rgba(44, 44, 44, 255);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.header div {
+}
+
+.member-list {
+  width: 30%;
+  background-color: rgba(44, 44, 44, 255);
+  padding: 10px;
+}
+
+.member-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.member-list input {
+  width: 100%;
+  padding: 10px;
+  margin-right: 50px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rgba(44, 44, 44, 255);
+  color: white;
+}
+
+.member-list ul li {
+  padding: 8px 0;
+  padding-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.member-list ul li span {
+  padding: 5px;
+}
+
+.member-list ul li.active {
+  background-color: rgba(81, 81, 81, 255);
+}
+
+.chat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  background-image: url("../src/7331541.jpg");
+  background-position: 10rem;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+.avatar {
+}
+
+.message {
+  display: flex;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+}
+
+.message.self {
+  justify-content: flex-end;
+}
+.message.self .message-data {
+  background-color: #005c4b;
+}
+
+/* .avatar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+} */
+
+.avatar img,
+.header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.profil {
+  display: flex;
+  align-items: end;
+  padding: 10px;
+  background-color: #202020;
+}
+
+.profil img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profil img:hover {
+  cursor: pointer;
+}
+
+.message-data {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #2c2c2c;
+}
+
+.input-message {
+  flex: 1;
+  padding: 1rem;
+  background-color: #2c2c2c;
+
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.input-message input {
+  background-color: #2c2c2c;
+}
+
+.send-button {
+  padding: 8px 20px;
+  background-color: #7bff00;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Animasyon süresi 0.3 saniye */
+}
+
+.send-button:hover {
+  background-color: #4caf50; /* Fare üzerine gelince farklı bir arka plan rengi */
+}
+
+.send-message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.member-list ul li img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.chatbox {
+  width: 300px;
+  height: 200px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #2a3942;
+}
+
+.editImg {
+  display: flex;
+  justify-content: center;
+}
+
+.editImg div {
+  margin-top: 2rem;
+}
+
+.edit li div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 5px;
+  justify-content: center;
+}
+div.green {
+  padding: 0;
+  margin: 0;
+}
+
+.green {
+  color: #7bff00;
+  padding: 2rem;
+}
+
+.send-message input {
+  color: white !important;
+  border: none;
+}
+.chat-box input:focus {
+  outline: none;
+}
+
+img {
+  object-fit: cover;
+}
+.send-button {
+  background-color: #4caf50; /* Yeşil arka plan */
+  border: none;
+  color: white; /* Beyaz metin */
+  padding: 15px 25px; /* Yeterli dolgunluk */
+  text-align: center; /* Metni merkezlemek */
+  text-decoration: none; /* Metin dekorasyon yok */
+  font-size: 14px;
+  transition: background-color 1s, color 1s;
+}
+
+h3 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}

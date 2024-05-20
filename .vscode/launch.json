@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "LoginJwtApplication",
+      "request": "launch",
+      "mainClass": "com.socu.loginjwt.LoginJwtApplication",
+      "projectName": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-LoginJwtApplication<login-jwt>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.socu.loginjwt.LoginJwtApplication",
+      "projectName": "login-jwt",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+.register {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #111b21;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.register form > div {
+  margin-bottom: 10px;
+}
+
+.register form label {
+  font-weight: bold;
+}
+
+.register form input[type="text"],
+.register form input[type="email"],
+.register form input[type="password"],
+.register form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.register form button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.register .error {
+  color: #ff0000;
+  margin-top: 10px;
+  font-size: 14px;
+}
